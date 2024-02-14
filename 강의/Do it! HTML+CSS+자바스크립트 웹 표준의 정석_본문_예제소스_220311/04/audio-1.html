@@ -4,11 +4,22 @@
   <meta charset="UTF-8">
   <title>상품 소개 페이지</title>
   <link rel="stylesheet" href="css/poster.css">
+  <!-- -> css 작업시, css 파일을 분리해서 작업을 많이 함. 유지보수가 편해서 -->
+  <!-- 즉, css 파일과 연결 시키는 코드 -->
+
 </head>
 <body>
+  <img src="images/salad.jpg" alt="레드향">
+
   <div id="container">
     <img src="images/tangerines.jpg" alt="레드향">
+    <!-- -> 상대 경로로 해당 이미지 파일에 접근 시도
+    현재 파일 : audio-1.html, 같은 위치에 images 폴더에 바로 접근 -->
     <audio src="medias/spring.mp3" controls></audio>
+    <!-- 음원 파일을 불러옴, 불러오는 방법은 위와 상동 -->
+    <!-- 절대 경로 : C:\Users\it\Documents\WEB\강의\Do it! HTML+CSS+자바스크립트 웹 표준의 정석_본문_예제소스_220311\04\medias\spring.mp3 -->
+    <!-- controls 속성 : 상태조절 바, 막대, 플레이, 중지, 리모컨 -->
+
     <h1>레드향</h1>
     <p>껍질에 붉은 빛이 돌아 <b>레드향</b>이라 불린다.</p>
     <p>레드향은 <em>한라봉과 귤을 교배</em>한 것으로<br>일반 귤보다 2~3배 크고, 과육이 붉고 통통하다.</p>
@@ -27,10 +38,14 @@
     <hr>
     <h2>상품 구성</h2>
     <table>
+      <!-- 웹 문서에서 표를 작성할 때 사용하는 태그 : table -->
       <caption>선물용과 가정용 상품 구성</caption>
+      <!-- caption : 제목 -->
       <colgroup>
+      <!-- 행, 열을 묶을 때 사용 -->
         <col style="background-color:#eee;">
         <col>
+        <!-- 1열, 2열 특정 2개의 열을 합칠 때 사용 -->
         <col span="2" style="width:150px">
         <!-- span 속성을 사용해 합치기 전
           <col style="width:150px">
@@ -38,7 +53,9 @@
         -->
       </colgroup>
       <thead>
+        <!-- 표의 제목을 의미하는, 2줄로 표시 되고, 가운데 정렬이 기본으로 되어 있는 속성 -->
         <tr>
+          <!-- tr :  하나의 행 -->
           <th>용도</th>
           <th>중량</th>
           <th>갯수</t>
