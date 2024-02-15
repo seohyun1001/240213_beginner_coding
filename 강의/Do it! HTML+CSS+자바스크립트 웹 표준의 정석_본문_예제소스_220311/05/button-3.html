@@ -13,6 +13,12 @@
         <legend>상품 선택</legend>
         <p><b>주문할 상품을 선택해 주세요.</b></p>
         <ul id="product">
+
+          <!-- value 의 속성이고, 속성의 값 : s_3, 
+            폼에서 사용자가 입력, 체크한 값들을 , 서버로 전달. 
+            서버로 전달하는 값을 : value의 속성값을 전달. 
+            즉, s_3 이 서버에 전달이 됩니다.  
+          주의사항, 선물용 3kg 보여지는 값이고, 전달용이 아닙니다. --> 
           <li>
             <label><input type="checkbox" value="s_3">선물용 3kg</label>
             <input type="number" min="0" max="5">개 <small>(최대 5개)</small>
@@ -34,6 +40,9 @@
         <ul>
           <li><label><input type="radio" value="yes">선물 포장</label></li>
           <li><label><input type="radio" value="no">선물 포장 안 함</label></li>
+          <!-- 주의사항, 라디오 타입에서 name 속성으로 같은 이름으로 그룹 지어주기 -->
+          <!-- <li><label><input type="radio" name="gift" value="yes" >선물 포장</label></li>
+          <li><label><input type="radio" name="gift" value="no">선물 포장 안 함</label></li> -->
         </ul>    
       </fieldset>
       <fieldset>
