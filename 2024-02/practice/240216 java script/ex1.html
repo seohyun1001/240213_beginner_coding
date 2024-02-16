@@ -26,12 +26,11 @@
     <p>• document.write('hello world');</p>
     <script>
         document.write('hello world');
-
-        // 1. 간단한 버튼 하나 추가, onclick 이벤트 적용
-        // -> 특정 요소의 색깔 변경 / 기본적인 클래스, 객체, 조건문, 반복문, 변수 등
-        //    4개의 문서에 적용해 보기
-
     </script>
+
+    <!-- 1. 간단한 버튼 하나 추가, onclick 이벤트 적용
+    -> 특정 요소의 색깔 변경 / 기본적인 클래스, 객체, 조건문, 반복문, 변수 등
+      4개의 문서에 적용해 보기 -->
 
     <br>
     <br>
@@ -44,7 +43,7 @@
     <br>
     <br>
 
-    <p>- 버튼 + onclick="alert('hi')"</p>
+    <p>• 버튼 + onclick="alert('hi')"</p>
     <input type="button" value="hi" onclick="alert('hi')">
 
     <br>
@@ -55,9 +54,6 @@
     <p>-> alert('changed')의 값을 가져옴</p>
 
     <br>
-    <br>
-
-    <p>• 버튼 + 입력한 텍스트를 alert으로 띄우기</p>
 
     <!-- 계획
       1. 입력란에 입력된 내용을 가지고 오는 방법 모색. 
@@ -65,11 +61,17 @@
       2. 가지고 온 내용을 특정 변수에 담기. 
       3. 버튼을 클릭시 해당 변수를 사용하는 방법 모색.  -->
 
+    <p>• 버튼 + 입력한 텍스트를 alert으로 띄우기</p>
+
     <input type="text" id="change_text_input">
     <input type="button" value="변경글자 alert로 띄우기" id="change_text_btn" onclick="printMessage()">
-    
+
     <br>
     <br>
+
+    <!-- 1단계, 이메일을 먼저 입력받고, 출력해보기. 
+      2단계, 따로 패스워드를 입력받고, 따로 출력해보기. 
+      3단계, 한번에 2개를 다 출력해보기.  -->
 
     <p>• 이메일/패스워드 입력 버튼 -> 화면에 출력</p>
     <input type="text" id="email" placeholder="이메일">
@@ -81,6 +83,30 @@
     <br>
     <br>
 
+    <!-- 연습해보기. 
+      간단한 회원가입 폼 
+      1. 이메일 
+      2. 패스워드 
+      3. 확인용 패스워드 
+      4. 이름 
+      5. 전화번호 
+      결과는 alert 경고창에 보여주기.  -->
+
+    <p>• 간단한 회원가입 폼</p>
+    <input type="text" id="e" placeholder="이메일">
+    <br>
+    <input type="password" id="p" placeholder="패스워드">
+    <br>
+    <input type="password" id="p2" placeholder="패스워드확인">
+    <br>
+    <input type="text" id="name" placeholder="이름">
+    <br>
+    <input type="text" id="tel" placeholder="010-0000-0000">
+    <input type="button" value="Sign Up" onclick="printuserinfo()">
+
+
+    <br>
+    <br>
 
     <p>• 야간모드로 바꾸기</p>
     <input type="button" value="night" onclick="
@@ -103,7 +129,23 @@
         function printinfo() {
             var email = document.getElementById('email').value
             var pw = document.getElementById('pw').value
-            var userinfo = "email : " + email + " / pw : " + pw
+            var info = "email : " + email + " / pw : " + pw
+            alert(info)
+        }
+
+        // 문자열을 연결하는 연산자, "+" 
+
+        function printuserinfo() {
+            var e = document.getElementById('e').value
+            var p = document.getElementById('p').value
+            var p2 = document.getElementById('p2').value
+            var name = document.getElementById('name').value
+            var tel = document.getElementById('tel').value
+            var userinfo
+                = "email : " + e
+                + " / pw : " + p
+                + " / name : " + name
+                + " / tel : " + tel
             alert(userinfo)
         }
 
