@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 
-     <style>
+    <style>
         h3 {
             margin-left: 20px;
         }
@@ -98,7 +98,6 @@
     <input type="password" id="pw" placeholder="패스워드">
     <input type="button" value="login" onclick="printinfo()">
 
-
     <br>
     <br>
 
@@ -119,26 +118,21 @@
             <li>패스워드 :</li>
             <li>패스워드확인 :</li>
             <li>이름 :</li>
-            <li>전화번호</li>
+            <li>전화번호 :</li>
         </ul>
 
         <div>
             <input type="text" id="e" placeholder="이메일">
             <br>
-
-            <input type="password" id="p" placeholder="패스워드">
+            <input type="text" id="p" placeholder="패스워드">
             <br>
-
-            <input type="password" id="p2" placeholder="패스워드확인">
+            <input type="text" id="p2" placeholder="패스워드확인">
             <br>
-
             <input type="text" id="name" placeholder="이름">
             <br>
-
             <input type="text" id="tel" placeholder="010-0000-0000">
             <br><br>
             <input type="button" value="Sign Up" onclick="printuserinfo()">
-            
         </div>
     </div>
 
@@ -153,6 +147,18 @@
     <input type="button" value="day" onclick="
         document.querySelector('body').style.backgroundColor = 'white';
         document.querySelector('body').style.color = 'black';">
+
+    <br>
+    <br>
+
+    <p>• onkeydown 단순 소개(실사용은 이렇게 x)</p>
+    <input type="text" onkeydown="alert('key down')">
+    <p>- 공식 문서에 deprecated 지원을 안해서 참고용으로만</p>
+
+    <br>
+    <br>
+
+
 
 
     <script>
@@ -179,16 +185,41 @@
             var name = document.getElementById('name').value
             var tel = document.getElementById('tel').value
             var userinfo
-                = "email : " + e
+                = "회원가입 감사합니다. (" + "email : " + e
                 + " / pw : " + p
                 + " / pw : " + p2
                 + " / name : " + name
-                + " / tel : " + tel
+                + " / tel : " + tel + ")"
             alert(userinfo)
-        }
-
-
     </script>
+
+    <!-- 콘솔 출력해보기
+     실제로 입력된 값이 제대로 들어 왔는지 확인용
+     ****** 매우 많이 사용함 / 매우 중요
+
+     console.log(userinfo)
+     } --> 
+
+
+
+     <!-- 문자열 기능, 내장 기능, 기본 클래스 , 여러가지 표현이 있는데,
+     그만큼 자주 많이 사용되는 기능이다.
+     예) 이미지 파일 ,
+     abc.png , def.mp4 -> 파일명: 문자열로 다 구성이됨.
+     0123456
+     특정의 요소를 선택하기. -->
+
+
+
+     <!-- 자바스크립트에서 데이터 타입에 대해서 이야기를 하는데.
+     동적 타이핑라는게 뭐냐면,.
+     예) var a = "abc"
+     타입스크립트, -> 문자열, 타입을 명시 표시.
+
+     자바 데이터 타입,
+     예) int a = 3, string str = "123"
+     동적 타이핑을 지원 하기 시작함. -->
+
 
 
 </body>
