@@ -20,7 +20,10 @@ h1 {
     padding-bottom: 20px;
     align-items: center;
     margin: 0px;
+    text-align: center;
 }
+
+/* align-items / text-align 다름! */
 
 ol {
     border-right: 1px solid gray;
@@ -28,6 +31,8 @@ ol {
     padding-top: 15px;
     width: 100px;
 }
+
+/* 만약, #grid ol{} -> 이라고 하면 id="grid" 하위요소의 ol을 말함 */
 
 body{
     margin: 0;
@@ -115,6 +120,9 @@ body{
 /* 화면을 늘려보면 ARTICLE 영역은 자동으로 커지고 
     NAVIGATION 영역은 150px 을 고정적으로 차지.
     여기서 1fr이 무엇인지 확인 해보기. 
+    fr = fraction(부분) -> 비율에 맞춰 반응형으로 반응함
+    ex) 개체 2개 -> 1fr 2fr / 이면 개체가 1:2 크기를 유지함
+    개체 개수만큼 설정해줘야 함
     150px 대신 1fr 로 하면 두 칼럼은 같은 크기가 됨. 
 
     grid-template-columns: 1fr 1fr;
