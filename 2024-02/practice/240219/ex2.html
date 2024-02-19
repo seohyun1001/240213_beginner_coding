@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>1. compare operator</h1>
+    <h3>1&lt;2</h3>
+    <script>
+        // document.write 의 기능은 , JS 로 HTML 에 출력하기.
+        document.write("<h1>test</h1>")
+        document.write(1 < 2);
+    </script>
+    <h3>1&lt;1</h3>
+    <script>
+        document.write(1 < 2);
+    </script>
+
+    <br><br><br>
+
+    <h1>2. if</h1>
+    <h2>IF-true</h2>
+    <script>
+        document.write("1<br>");
+        if (true) {
+            document.write("2<br>");
+        } else {
+            document.write("3<br>");
+        }
+        document.write("4<br>");
+    </script>
+
+    <h2>IF-false</h2>
+    <script>
+        document.write("1<br>");
+        if (false) {
+            document.write("2<br>");
+        } else {
+            document.write("3<br>");
+        }
+        document.write("4<br>");
+    </script>
+
+    <br><br><br>
+
+    <h1>3. IF 활용</h1>
+    <input id="night_day" type="button" value="night" onclick="
+    
+      if(document.querySelector('#night_day').value === 'night') {
+        document.querySelector('body').style.backgroundColor = 'black';
+        document.querySelector('body').style.color= 'white';
+        document.querySelector('#night_day').value = 'day';   
+      } else {
+        document.querySelector('body').style.backgroundColor = 'white';
+        document.querySelector('body').style.color= 'black';
+        document.querySelector('#night_day').value = 'night';   
+      }
+      ">
+
+</body>
+
+</html>
